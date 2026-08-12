@@ -1,0 +1,79 @@
+/* ==========================================================================
+   CONTACT PAGE STYLES - DENTAMA V1
+   ========================================================================== */
+
+.contact-cards-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+}
+
+.contact-details-box,
+.contact-map-box {
+  padding: 36px;
+}
+
+.contact-box-title {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  color: var(--color-gold-light);
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 12px;
+}
+
+.c-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.c-icon {
+  font-size: 22px;
+  color: var(--color-gold-light);
+  flex-shrink: 0;
+}
+
+.c-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 3px;
+  letter-spacing: 0.5px;
+}
+
+.c-value {
+  font-size: 15px;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.c-value.highlight {
+  color: var(--color-gold-light);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+a.c-value:hover {
+  color: var(--color-gold-light);
+}
+
+.map-iframe-container {
+  width: 100%;
+  height: 280px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.map-iframe-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 900px) {
+  .contact-cards-layout {
+    grid-template-columns: 1fr;
+  }
+}

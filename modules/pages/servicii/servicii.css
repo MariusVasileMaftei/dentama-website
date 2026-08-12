@@ -1,0 +1,122 @@
+/* ==========================================================================
+   SERVICII PAGE STYLES - DENTAMA V1
+   ========================================================================== */
+
+.service-highlight {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  padding: 48px;
+  margin-bottom: 50px;
+}
+
+.highlight-badge {
+  display: inline-block;
+  color: var(--color-gold-light);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.highlight-title {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-white);
+  margin-bottom: 18px;
+}
+
+.highlight-desc {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.highlight-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.highlight-features li {
+  font-size: 15px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.highlight-card-side {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.side-title {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  color: var(--color-gold-light);
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 12px;
+}
+
+.side-item {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.side-item strong {
+  color: var(--text-primary);
+}
+
+.secondary-services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.sec-service-card {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sec-service-icon {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.sec-service-title {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-white);
+  margin-bottom: 16px;
+}
+
+.sec-service-desc {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 28px;
+  flex: 1;
+}
+
+@media (max-width: 900px) {
+  .service-highlight {
+    grid-template-columns: 1fr;
+    padding: 28px;
+  }
+  .secondary-services-grid {
+    grid-template-columns: 1fr;
+  }
+}

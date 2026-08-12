@@ -1,0 +1,168 @@
+<!-- ADMIN & MINI-CRM MODULE - V2 (STATIC) -->
+<section class="section">
+  <div class="container">
+    <div class="crm-top-bar">
+      <div>
+        <span class="section-badge">Panou Control Cabinet</span>
+        <h1 class="crm-title">Dentama <span>Mini-CRM & Administrare</span></h1>
+        <p class="crm-subtitle">Panou static pentru monitorizarea solicitărilor de programare și administrarea cazurilor clinice de pe site.</p>
+      </div>
+      <div class="crm-user-badge">
+        <span class="user-status-dot"></span>
+        <span>Autentificat: <strong>Admin</strong></span>
+      </div>
+    </div>
+
+    <!-- METRICS CARDS -->
+    <div class="crm-metrics-grid">
+      <div class="metric-card radiant-card">
+        <div class="metric-icon">📥</div>
+        <div class="metric-data">
+          <div class="metric-number" id="metric-inquiries-count">0</div>
+          <div class="metric-label">Solicitări Programări (Noi)</div>
+        </div>
+      </div>
+
+      <div class="metric-card radiant-card">
+        <div class="metric-icon">🔬</div>
+        <div class="metric-data">
+          <div class="metric-number" id="metric-cases-count">2</div>
+          <div class="metric-label">Cazuri Clinice Active</div>
+        </div>
+      </div>
+
+      <div class="metric-card radiant-card">
+        <div class="metric-icon">💬</div>
+        <div class="metric-data">
+          <div class="metric-number">100%</div>
+          <div class="metric-label">Acord SMS & WhatsApp</div>
+        </div>
+      </div>
+
+      <div class="metric-card radiant-card">
+        <div class="metric-icon">⭐</div>
+        <div class="metric-data">
+          <div class="metric-number">5.0 ★</div>
+          <div class="metric-label">Rating Mediu Google</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TABS NAVIGATION -->
+    <div class="crm-tabs-nav">
+      <button class="crm-tab-btn active" data-tab="tab-inquiries">📋 Solicitări Pacienți (Leads)</button>
+      <button class="crm-tab-btn" data-tab="tab-cases">🔬 Gestiune Cazuri Clinice</button>
+      <button class="crm-tab-btn" data-tab="tab-site-info">⚙️ Informații Site & Contact</button>
+    </div>
+
+    <!-- TAB 1: INQUIRIES LIST -->
+    <div class="crm-tab-pane active" id="tab-inquiries">
+      <div class="crm-panel-card radiant-card">
+        <div class="panel-header">
+          <h2 class="panel-title">Lista Solicitărilor de Programare Primite</h2>
+          <button type="button" class="btn btn-secondary" id="btn-clear-inquiries" style="padding: 6px 14px; font-size: 13px;">Șterge Istoric</button>
+        </div>
+
+        <div class="table-responsive">
+          <table class="crm-table">
+            <thead>
+              <tr>
+                <th>Data / Ora</th>
+                <th>Nume Pacient</th>
+                <th>Telefon</th>
+                <th>Tratament Solicitat</th>
+                <th>Acord SMS/WA</th>
+                <th>Acțiuni Rapide</th>
+              </tr>
+            </thead>
+            <tbody id="inquiries-table-body">
+              <!-- Populated dynamically via JS from localStorage -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: CASES MANAGER -->
+    <div class="crm-tab-pane" id="tab-cases">
+      <div class="crm-panel-card radiant-card">
+        <div class="panel-header">
+          <h2 class="panel-title">Cazuri Clinice Afișate pe Site</h2>
+          <button type="button" class="btn btn-primary" id="btn-open-add-case" style="padding: 8px 18px; font-size: 13px;">➕ Adaugă Caz Clinic Nou</button>
+        </div>
+
+        <!-- Case Editor Form Modal / Panel -->
+        <div id="case-editor-modal" class="case-editor-box" style="display: none;">
+          <h3 class="editor-title" id="case-editor-heading">Adăugare Caz Clinic Nou</h3>
+          <input type="hidden" id="edit-case-id" value="-1">
+
+          <div class="form-row">
+            <div class="form-field">
+              <label>Titlu Caz Clinic *</label>
+              <input type="text" id="case-input-title" class="form-input" placeholder="ex: Tratament de canal molar 46">
+            </div>
+            <div class="form-field">
+              <label>Descriere Rezultat *</label>
+              <input type="text" id="case-input-desc" class="form-input" placeholder="ex: Curățare 4 canale sub microscop Zeiss și vindecare completă...">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label>Imagine Înainte (Încarcă fișier)</label>
+              <input type="file" id="case-input-before-file" class="form-input">
+            </div>
+            <div class="form-field">
+              <label>Imagine După (Încarcă fișier)</label>
+              <input type="file" id="case-input-after-file" class="form-input">
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 12px; margin-top: 10px;">
+            <button type="button" class="btn btn-primary" id="btn-save-case-item">Salvează Cazul</button>
+            <button type="button" class="btn btn-secondary" id="btn-cancel-case-item">Anulează</button>
+          </div>
+        </div>
+
+        <!-- Current Cases Stack -->
+        <div id="cases-admin-stack" class="cases-admin-stack">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: SITE INFO -->
+    <div class="crm-tab-pane" id="tab-site-info">
+      <div class="crm-panel-card radiant-card">
+        <h2 class="panel-title" style="margin-bottom: 20px;">Configurare Informații Generale Site</h2>
+        
+        <div class="form-row">
+          <div class="form-field">
+            <label>Titlu Principal Banner (Acasă)</label>
+            <input type="text" class="form-input" value="Tratamente de Canal la Microscop & Stomatologie Generală">
+          </div>
+          <div class="form-field">
+            <label>Telefon Cabinet</label>
+            <input type="text" class="form-input" value="+40 722 000 000">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label>Adresă Locație</label>
+            <input type="text" class="form-input" value="Strada Vasile Lupu Nr. 88, Bloc Z, Iași">
+          </div>
+          <div class="form-field">
+            <label>Program Lucru</label>
+            <input type="text" class="form-input" value="Luni - Vineri: 08:00 - 20:00 (Sâmbătă/Duminică Închis)">
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-primary" style="margin-top: 15px;" onclick="alert('Informațiile generale au fost actualizate local!')">
+          Salvează Modificările
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>

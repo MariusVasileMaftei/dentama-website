@@ -1,0 +1,99 @@
+/* ==========================================================================
+   GDPR POPUP STYLES - DENTAMA V3
+   ========================================================================== */
+
+.gdpr-popup-container {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+  z-index: 9999;
+  animation: gdprSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes gdprSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gdpr-card {
+  padding: 24px 30px;
+  background-color: rgba(18, 18, 18, 0.98);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-gold-primary);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8), 0 0 25px var(--color-gold-glow-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.gdpr-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.gdpr-icon {
+  font-size: 36px;
+  flex-shrink: 0;
+}
+
+.gdpr-title {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-gold-light);
+  margin-bottom: 6px;
+}
+
+.gdpr-desc {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.gdpr-actions {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.gdpr-actions .btn {
+  padding: 10px 20px;
+  font-size: 13.5px;
+  white-space: nowrap;
+}
+
+@media (max-width: 820px) {
+  .gdpr-popup-container {
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+  }
+
+  .gdpr-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 18px;
+  }
+
+  .gdpr-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .gdpr-actions .btn {
+    width: 100%;
+  }
+}

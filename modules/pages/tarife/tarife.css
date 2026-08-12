@@ -1,0 +1,90 @@
+/* ==========================================================================
+   TARIFE PAGE STYLES - DENTAMA V1
+   ========================================================================== */
+
+.tarife-category-card {
+  padding: 36px;
+  margin-bottom: 40px;
+}
+
+.cat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 16px;
+}
+
+.cat-title {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  color: var(--color-gold-light);
+  font-weight: 700;
+}
+
+.cat-badge {
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  background-color: rgba(168, 147, 121, 0.15);
+  color: var(--color-gold-light);
+  border: 1px solid var(--border-subtle);
+}
+
+.tarife-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tarife-table th {
+  text-align: left;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.tarife-table .price-col {
+  text-align: right;
+  width: 160px;
+}
+
+.tarife-table td {
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.proc-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-white);
+  margin-bottom: 4px;
+}
+
+.proc-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.price-val {
+  text-align: right;
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-gold-light);
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .tarife-category-card {
+    padding: 20px;
+  }
+  .cat-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
