@@ -1,0 +1,68 @@
+<main class="appointment-page">
+  <!----
+  <section class="appointment-hero">
+    <div class="appointment-shell appointment-hero__grid">
+      <div>
+        <span class="appointment-eyebrow">Programare simplă și rapidă</span>
+        <h1>Hai să vorbim despre <em>zâmbetul tău.</em></h1>
+      </div>
+      <p>Completează formularul, iar echipa DENTAMA te va contacta pentru confirmarea zilei și orei. Pentru urgențe, ne poți suna direct.</p>
+    </div>
+  </section>
+--->
+  <section class="appointment-content">
+    <div class="appointment-shell appointment-layout">
+      <aside class="appointment-info-card">
+        <span class="appointment-eyebrow">Înainte de programare</span>
+        <h2>Suntem aici să te ajutăm.</h2>
+        <div class="appointment-info-list">
+          <div><span>01</span><p><strong>Confirmare personală</strong>Echipa noastră revine telefonic pentru stabilirea programării.</p></div>
+          <div><span>02</span><p><strong>Plan explicat clar</strong>Primești recomandările și costurile înainte de începerea tratamentului.</p></div>
+          <div><span>03</span><p><strong>Confort și precizie</strong>Tratamentul este adaptat situației tale și realizat cu atenție.</p></div>
+        </div>
+        <div class="appointment-direct-contact">
+          <span>Preferi să ne suni?</span>
+          <a href="tel:+40722000000" data-external-action>+40 722 000 000</a>
+        </div>
+      </aside>
+
+      <div class="appointment-form-card">
+        <div class="appointment-form-card__heading">
+          <span class="appointment-eyebrow">Solicită o programare</span>
+          <h2>Spune-ne cum te putem ajuta.</h2>
+        </div>
+        <div class="appointment-success" data-appointment-success hidden tabindex="-1">
+          <strong>Solicitarea a fost înregistrată în previzualizare.</strong>
+          <span>În versiunea finală, aici va fi conectat serviciul de trimitere către cabinet.</span>
+        </div>
+        <form class="appointment-form" data-appointment-form>
+          <div class="appointment-form__row">
+            <label><span class="appointment-form__label-text">Nume și prenume <b aria-hidden="true">*</b></span><input type="text" name="name" autocomplete="name" placeholder="Prenume Nume" required></label>
+            <label><span class="appointment-form__label-text">Telefon <b aria-hidden="true">*</b></span><input type="tel" name="phone" autocomplete="tel" placeholder="07xx xxx xxx" required></label>
+          </div>
+          <label><span>Adresă de e-mail</span><input type="email" name="email" autocomplete="email" placeholder="nume@exemplu.ro"></label>
+          <label><span>Spune-ne pe scurt motivul programării</span><textarea name="message" rows="4" placeholder="Simptome, întrebări sau alte detalii utile..."></textarea></label>
+          <label class="appointment-consent"><input type="checkbox" required><span>Sunt de acord să fiu contactat pentru confirmarea programării și am citit politica de confidențialitate.</span></label>
+          <button type="submit">Trimite solicitarea <span aria-hidden="true">→</span></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="appointment-location" aria-labelledby="location-title">
+    <div class="appointment-shell">
+      <header class="appointment-location__header">
+        <div><span class="appointment-eyebrow">Ne găsești ușor</span><h2 id="location-title">DENTAMA, Iași</h2></div>
+        <div><p>Str. Vasile Lupu nr. 88, Bloc Z, Iași</p><span>Luni–Vineri · 08:00–20:00</span></div>
+      </header>
+      <div class="appointment-map-card">
+        <iframe title="Harta către cabinetul DENTAMA din Iași" src="https://www.google.com/maps?q=Strada%20Vasile%20Lupu%2088%20Iasi&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="appointment-map-card__overlay">
+          <span>Pornește din locația ta</span>
+          <strong>Vezi traseul cel mai rapid către cabinet.</strong>
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Strada%20Vasile%20Lupu%2088%2C%20Iasi" target="_blank" rel="noopener noreferrer" data-external-action>Obține direcții <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

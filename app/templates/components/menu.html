@@ -1,0 +1,47 @@
+<!-- Componentă: meniu principal DENTAMA -->
+<header class="site-header" data-menu>
+  <div class="site-header__inner">
+    <a class="brand" href="/" aria-label="DENTAMA — pagina principală">
+      <img class="brand__logo" src="/static/assets/logo-transparent.png" alt="DENTAMA">
+    </a>
+
+    <nav class="main-nav" id="main-navigation" aria-label="Navigație principală">
+      <ul class="main-nav__list">
+        <li><a class="main-nav__link is-active" href="/" aria-current="page">Acasă</a></li>
+        <li class="main-nav__item main-nav__item--dropdown">
+          <a class="main-nav__link" href="/servicii">Servicii</a>
+          <button class="submenu-toggle" type="button" aria-expanded="false" aria-label="Deschide submeniul Servicii">
+            <span aria-hidden="true">⌄</span>
+          </button>
+          <ul class="submenu">
+            <li><a href="/servicii/endodontie">Endodonție</a></li>
+            <li><a href="/servicii/implantologie">Implantologie</a></li>
+            <li><a href="/servicii/protetica">Protetică dentară</a></li>
+            <li><a href="/servicii/estetica">Estetică dentară</a></li>
+            <li><a href="/servicii/profilaxie">Profilaxie</a></li>
+            <li><a class="submenu__all" href="/servicii">Toate serviciile</a></li>
+          </ul>
+        </li>
+        <li><a class="main-nav__link" href="/echipa">Echipa</a></li>
+        <li><a class="main-nav__link" href="/tarife">Tarife</a></li>
+        <li><a class="main-nav__link" href="/cazuri-noi">Cazuri</a></li>
+        <li><a class="main-nav__link" href="/despre-noi">Despre noi</a></li>
+      </ul>
+
+      <div class="main-nav__mobile-actions">
+        <a class="appointment-button" href="/programare">Programare</a>
+      </div>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="phone-link" href="tel:+40722000000" aria-label="Sună la +40 722 000 000">
+        <span class="phone-link__label">Sună-ne</span>
+        <span>+40 722 000 000</span>
+      </a>
+      <a class="appointment-button appointment-button--desktop" href="/programare">Programare</a>
+      <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false" aria-label="Deschide meniul">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>

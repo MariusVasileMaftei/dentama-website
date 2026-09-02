@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Programare online — DENTAMA Iași</title>
+  <link rel="stylesheet" href="../app/static/components/menu/menu.css">
+  <link rel="stylesheet" href="../app/static/components/footer/footer.css">
+  <link rel="stylesheet" href="../app/static/components/body-cards/cards.css">
+  <link rel="stylesheet" href="../app/static/components/appointment/appointment.css">
+  <style>html,body{margin:0;background:#f5f0e9;font-size:16px;-webkit-text-size-adjust:none;text-size-adjust:none}</style>
+</head>
+<body>
+  <!-- Componentă: meniu principal DENTAMA -->
+<header class="site-header" data-menu>
+  <div class="site-header__inner">
+    <a class="brand" href="index.html" data-preview-link aria-label="DENTAMA — pagina principală">
+      <img class="brand__logo" src="../app/static/assets/logo-transparent.png" alt="DENTAMA">
+    </a>
+
+    <nav class="main-nav" id="main-navigation" aria-label="Navigație principală">
+      <ul class="main-nav__list">
+        <li><a class="main-nav__link" href="index.html" data-preview-link>Acasă</a></li>
+        <li class="main-nav__item main-nav__item--dropdown">
+          <a class="main-nav__link" href="/servicii">Servicii</a>
+          <button class="submenu-toggle" type="button" aria-expanded="false" aria-label="Deschide submeniul Servicii">
+            <span aria-hidden="true">⌄</span>
+          </button>
+          <ul class="submenu">
+            <li><a href="/servicii/endodontie">Endodonție</a></li>
+            <li><a href="/servicii/implantologie">Implantologie</a></li>
+            <li><a href="/servicii/protetica">Protetică dentară</a></li>
+            <li><a href="/servicii/estetica">Estetică dentară</a></li>
+            <li><a href="/servicii/profilaxie">Profilaxie</a></li>
+            <li><a class="submenu__all" href="/servicii">Toate serviciile</a></li>
+          </ul>
+        </li>
+        <li><a class="main-nav__link" href="echipa.html" data-preview-link>Echipa</a></li>
+        <li><a class="main-nav__link" href="tarife.html" data-preview-link>Tarife</a></li>
+        <li><a class="main-nav__link" href="/cazuri-noi">Cazuri</a></li>
+        <li><a class="main-nav__link" href="/despre-noi">Despre noi</a></li>
+      </ul>
+
+      <div class="main-nav__mobile-actions">
+        <a class="appointment-button is-active" href="programare.html" data-preview-link aria-current="page">Programare</a>
+      </div>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="phone-link" href="tel:+40722000000" aria-label="Sună la +40 722 000 000">
+        <span class="phone-link__label">Sună-ne</span>
+        <span>+40 722 000 000</span>
+      </a>
+      <a class="appointment-button appointment-button--desktop is-active" href="programare.html" data-preview-link aria-current="page">Programare</a>
+      <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false" aria-label="Deschide meniul">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+  <main class="appointment-page">
+  <!----
+  <section class="appointment-hero">
+    <div class="appointment-shell appointment-hero__grid">
+      <div>
+        <span class="appointment-eyebrow">Programare simplă și rapidă</span>
+        <h1>Hai să vorbim despre <em>zâmbetul tău.</em></h1>
+      </div>
+      <p>Completează formularul, iar echipa DENTAMA te va contacta pentru confirmarea zilei și orei. Pentru urgențe, ne poți suna direct.</p>
+    </div>
+  </section>
+--->
+  <section class="appointment-content">
+    <div class="appointment-shell appointment-layout">
+      <aside class="appointment-info-card">
+        <span class="appointment-eyebrow">Înainte de programare</span>
+        <h2>Suntem aici să te ajutăm.</h2>
+        <div class="appointment-info-list">
+          <div><span>01</span><p><strong>Confirmare personală</strong>Echipa noastră revine telefonic pentru stabilirea programării.</p></div>
+          <div><span>02</span><p><strong>Plan explicat clar</strong>Primești recomandările și costurile înainte de începerea tratamentului.</p></div>
+          <div><span>03</span><p><strong>Confort și precizie</strong>Tratamentul este adaptat situației tale și realizat cu atenție.</p></div>
+        </div>
+        <div class="appointment-direct-contact">
+          <span>Preferi să ne suni?</span>
+          <a href="tel:+40722000000" data-external-action>+40 722 000 000</a>
+        </div>
+      </aside>
+
+      <div class="appointment-form-card">
+        <div class="appointment-form-card__heading">
+          <span class="appointment-eyebrow">Solicită o programare</span>
+          <h2>Spune-ne cum te putem ajuta.</h2>
+        </div>
+        <div class="appointment-success" data-appointment-success hidden tabindex="-1">
+          <strong>Solicitarea a fost înregistrată în previzualizare.</strong>
+          <span>În versiunea finală, aici va fi conectat serviciul de trimitere către cabinet.</span>
+        </div>
+        <form class="appointment-form" data-appointment-form>
+          <div class="appointment-form__row">
+            <label><span class="appointment-form__label-text">Nume și prenume <b aria-hidden="true">*</b></span><input type="text" name="name" autocomplete="name" placeholder="Prenume Nume" required></label>
+            <label><span class="appointment-form__label-text">Telefon <b aria-hidden="true">*</b></span><input type="tel" name="phone" autocomplete="tel" placeholder="07xx xxx xxx" required></label>
+          </div>
+          <label><span>Adresă de e-mail</span><input type="email" name="email" autocomplete="email" placeholder="nume@exemplu.ro"></label>
+          <label><span>Spune-ne pe scurt motivul programării</span><textarea name="message" rows="4" placeholder="Simptome, întrebări sau alte detalii utile..."></textarea></label>
+          <label class="appointment-consent"><input type="checkbox" required><span>Sunt de acord să fiu contactat pentru confirmarea programării și am citit politica de confidențialitate.</span></label>
+          <button type="submit">Trimite solicitarea <span aria-hidden="true">→</span></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="appointment-location" aria-labelledby="location-title">
+    <div class="appointment-shell">
+      <header class="appointment-location__header">
+        <div><span class="appointment-eyebrow">Ne găsești ușor</span><h2 id="location-title">DENTAMA, Iași</h2></div>
+        <div><p>Str. Vasile Lupu nr. 88, Bloc Z, Iași</p><span>Luni–Vineri · 08:00–20:00</span></div>
+      </header>
+      <div class="appointment-map-card">
+        <iframe title="Harta către cabinetul DENTAMA din Iași" src="https://www.google.com/maps?q=Strada%20Vasile%20Lupu%2088%20Iasi&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="appointment-map-card__overlay">
+          <span>Pornește din locația ta</span>
+          <strong>Vezi traseul cel mai rapid către cabinet.</strong>
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Strada%20Vasile%20Lupu%2088%2C%20Iasi" target="_blank" rel="noopener noreferrer" data-external-action>Obține direcții <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+  <!-- Componentă: footer principal DENTAMA -->
+<footer class="site-footer" data-footer>
+  <div class="site-footer__glow" aria-hidden="true"></div>
+  <div class="site-footer__container">
+    <section class="site-footer__cta" aria-labelledby="footer-cta-title">
+      <div>
+        <span class="site-footer__eyebrow">Ai nevoie de o consultație?</span>
+        <h2 id="footer-cta-title">Primul pas spre un zâmbet sănătos începe aici.</h2>
+        <p>Spune-ne pe scurt ce te supără, iar echipa DENTAMA te va contacta pentru stabilirea programării.</p>
+      </div>
+      <div class="site-footer__cta-actions">
+        <a class="site-footer__button is-active" href="programare.html" data-preview-link aria-current="page">Solicită o programare <span aria-hidden="true">→</span></a>
+        <a class="site-footer__phone" href="tel:+40722000000">
+          <span class="site-footer__round-icon" aria-hidden="true">☎</span>
+          <span><small>Sună direct</small>+40 722 000 000</span>
+        </a>
+      </div>
+    </section>
+
+    <div class="site-footer__main">
+      <div class="site-footer__brand">
+        <a href="index.html" data-preview-link aria-label="DENTAMA — pagina principală">
+          <img src="../app/static/assets/logo-transparent.png" alt="DENTAMA">
+        </a>
+        <p>Stomatologie modernă, cu grijă pentru confortul tău și precizie până la cel mai mic detaliu.</p>
+        <div class="site-footer__rating" aria-label="Evaluare 5 din 5 pe Google">
+          <strong>5.0</strong><span aria-hidden="true">★★★★★</span><small>Recenzii Google</small>
+        </div>
+      </div>
+
+      <nav class="site-footer__column" aria-label="Navigare în subsol">
+        <h3>Explorează</h3>
+        <ul class="site-footer__links">
+          <li><a href="/servicii">Servicii</a></li>
+          <li><a href="echipa.html" data-preview-link>Echipa medicală</a></li>
+          <li><a href="tarife.html" data-preview-link>Tarife</a></li>
+          <li><a href="/cazuri-noi">Cazuri clinice</a></li>
+          <li><a href="/despre-noi">Despre noi</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-footer__column">
+        <h3>Ne găsești aici</h3>
+        <ul class="site-footer__contact">
+          <li><span aria-hidden="true">⌖</span><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Strada+Vasile+Lupu+88+Iasi" target="_blank" rel="noopener noreferrer">Str. Vasile Lupu nr. 88,<br>Bloc Z, Iași</a></li>
+          <li><span aria-hidden="true">✉</span><a href="mailto:contact@dentama.ro">contact@dentama.ro</a></li>
+          <li><span aria-hidden="true">☎</span><a href="tel:+40722000000">+40 722 000 000</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__column site-footer__schedule">
+        <h3>Program</h3>
+        <div><span>Luni – Vineri</span><strong>08:00 – 20:00</strong></div>
+        <div><span>Sâmbătă</span><strong>Închis</strong></div>
+        <div><span>Duminică</span><strong>Închis</strong></div>
+        <div class="site-footer__social" aria-label="Rețele sociale">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="DENTAMA pe Instagram">IG</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="DENTAMA pe Facebook">f</a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="DENTAMA pe TikTok">TT</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-footer__bottom">
+    <div class="site-footer__container site-footer__bottom-inner">
+      <p>© <span data-footer-year>2026</span> DENTAMA. Toate drepturile rezervate.</p>
+      <div><a href="/politica-de-confidentialitate">Politica de confidențialitate</a><span aria-hidden="true">•</span><span>Cabinet stomatologic · Iași</span></div>
+    </div>
+  </div>
+</footer>
+
+  <script src="../app/static/components/menu/menu.js"></script>
+  <script src="../app/static/components/footer/footer.js"></script>
+  <script src="../app/static/components/appointment/appointment.js"></script>
+  <script>
+    document.querySelectorAll('a:not([data-external-action]):not([data-preview-link])').forEach(link => link.addEventListener('click', event => event.preventDefault()));
+    window.initDentamaMenu();
+    window.initDentamaFooter();
+  </script>
+</body>
+</html>

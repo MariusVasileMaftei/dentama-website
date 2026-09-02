@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{PAGE_TITLE}}</title>
+  <link rel="stylesheet" href="../app/static/components/menu/menu.css">
+  <link rel="stylesheet" href="../app/static/components/footer/footer.css">
+  <link rel="stylesheet" href="../app/static/components/body-cards/cards.css">
+  {{PAGE_STYLESHEET}}
+  <style>html,body{margin:0;background:#f5f0e9;font-size:16px;-webkit-text-size-adjust:none;text-size-adjust:none}</style>
+</head>
+<body>
+  {{MENU}}
+  {{BODY}}
+  {{FOOTER}}
+  <script src="../app/static/components/menu/menu.js"></script>
+  <script src="../app/static/components/footer/footer.js"></script>
+  {{PAGE_SCRIPT}}
+  <script>
+    document.querySelectorAll('a:not([data-external-action]):not([data-preview-link])').forEach(link => link.addEventListener('click', event => event.preventDefault()));
+    window.initDentamaMenu();
+    window.initDentamaFooter();
+  </script>
+</body>
+</html>

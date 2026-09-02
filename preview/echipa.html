@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Echipa medicală — DENTAMA Iași</title>
+  <link rel="stylesheet" href="../app/static/components/menu/menu.css">
+  <link rel="stylesheet" href="../app/static/components/footer/footer.css">
+  <link rel="stylesheet" href="../app/static/components/body-cards/cards.css">
+  <link rel="stylesheet" href="../app/static/components/team/team.css">
+  <style>html,body{margin:0;background:#f5f0e9;font-size:16px;-webkit-text-size-adjust:none;text-size-adjust:none}</style>
+</head>
+<body>
+  <!-- Componentă: meniu principal DENTAMA -->
+<header class="site-header" data-menu>
+  <div class="site-header__inner">
+    <a class="brand" href="index.html" data-preview-link aria-label="DENTAMA — pagina principală">
+      <img class="brand__logo" src="../app/static/assets/logo-transparent.png" alt="DENTAMA">
+    </a>
+
+    <nav class="main-nav" id="main-navigation" aria-label="Navigație principală">
+      <ul class="main-nav__list">
+        <li><a class="main-nav__link" href="index.html" data-preview-link>Acasă</a></li>
+        <li class="main-nav__item main-nav__item--dropdown">
+          <a class="main-nav__link" href="/servicii">Servicii</a>
+          <button class="submenu-toggle" type="button" aria-expanded="false" aria-label="Deschide submeniul Servicii">
+            <span aria-hidden="true">⌄</span>
+          </button>
+          <ul class="submenu">
+            <li><a href="/servicii/endodontie">Endodonție</a></li>
+            <li><a href="/servicii/implantologie">Implantologie</a></li>
+            <li><a href="/servicii/protetica">Protetică dentară</a></li>
+            <li><a href="/servicii/estetica">Estetică dentară</a></li>
+            <li><a href="/servicii/profilaxie">Profilaxie</a></li>
+            <li><a class="submenu__all" href="/servicii">Toate serviciile</a></li>
+          </ul>
+        </li>
+        <li><a class="main-nav__link is-active" href="echipa.html" data-preview-link aria-current="page">Echipa</a></li>
+        <li><a class="main-nav__link" href="tarife.html" data-preview-link>Tarife</a></li>
+        <li><a class="main-nav__link" href="/cazuri-noi">Cazuri</a></li>
+        <li><a class="main-nav__link" href="/despre-noi">Despre noi</a></li>
+      </ul>
+
+      <div class="main-nav__mobile-actions">
+        <a class="appointment-button" href="programare.html" data-preview-link>Programare</a>
+      </div>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="phone-link" href="tel:+40722000000" aria-label="Sună la +40 722 000 000">
+        <span class="phone-link__label">Sună-ne</span>
+        <span>+40 722 000 000</span>
+      </a>
+      <a class="appointment-button appointment-button--desktop" href="programare.html" data-preview-link>Programare</a>
+      <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false" aria-label="Deschide meniul">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+  <main class="team-page">
+  <section class="team-hero">
+    <div class="team-shell team-hero__grid">
+      <div>
+        <span class="team-eyebrow">Echipa DENTAMA</span>
+        <h1>Oameni atenți.<br><em>Îngrijire personală.</em></h1>
+      </div>
+      <div class="team-hero__intro">
+        <p>Suntem o echipă unită de aceeași grijă pentru pacient: trei medici și o asistentă care lucrează împreună pentru tratamente clare, precise și confortabile.</p>
+        <div class="team-hero__numbers"><span><strong>3</strong> medici</span><span><strong>1</strong> asistentă</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team-members" aria-labelledby="team-members-title">
+    <div class="team-shell">
+      <header class="team-members__header">
+        <div><span class="team-eyebrow">Cunoaște echipa</span><h2 id="team-members-title">Profesioniștii care au grijă de zâmbetul tău.</h2></div>
+        <p>Fiecare membru completează experiența DENTAMA prin competență, comunicare și atenție la detalii.</p>
+      </header>
+      <div class="team-members__list"><article class="doctor-card ">
+  <div class="doctor-card__portrait card-surface"><span class="doctor-card__initials" aria-hidden="true">M1</span></div>
+  <div class="doctor-card__content card-surface">
+    <header>
+      <p class="doctor-card__eyebrow">Echipa DENTAMA</p>
+      <h2>Medic 1</h2>
+      <p class="doctor-card__role">Medic specialist endodonție microscopică</p>
+    </header>
+    <div class="doctor-card__tags"><span class="doctor-card__tag">Endodonție</span><span class="doctor-card__tag">Microscop dentar</span><span class="doctor-card__tag">Retratamente</span></div>
+    <div class="doctor-card__bio"><p>Dedicat salvării dinților naturali prin tratamente endodontice precise, realizate sub control microscopic și explicate clar pacientului.</p></div>
+    <a class="doctor-card__link" href="programare.html" data-preview-link>Programează o consultație <span aria-hidden="true">→</span></a>
+  </div>
+</article>
+
+<article class="doctor-card ">
+  <div class="doctor-card__portrait card-surface"><span class="doctor-card__initials" aria-hidden="true">M2</span></div>
+  <div class="doctor-card__content card-surface">
+    <header>
+      <p class="doctor-card__eyebrow">Echipa DENTAMA</p>
+      <h2>Medic 2</h2>
+      <p class="doctor-card__role">Medic specialist chirurgie orală</p>
+    </header>
+    <div class="doctor-card__tags"><span class="doctor-card__tag">Chirurgie orală</span><span class="doctor-card__tag">Rezecții apicale</span><span class="doctor-card__tag">Extracții</span></div>
+    <div class="doctor-card__bio"><p>Abordează intervențiile chirurgicale cu atenție pentru confort, siguranță și o recuperare cât mai ușoară.</p></div>
+    <a class="doctor-card__link" href="programare.html" data-preview-link>Programează o consultație <span aria-hidden="true">→</span></a>
+  </div>
+</article>
+
+<article class="doctor-card ">
+  <div class="doctor-card__portrait card-surface"><span class="doctor-card__initials" aria-hidden="true">M3</span></div>
+  <div class="doctor-card__content card-surface">
+    <header>
+      <p class="doctor-card__eyebrow">Echipa DENTAMA</p>
+      <h2>Medic 3</h2>
+      <p class="doctor-card__role">Medic specialist ortodonție</p>
+    </header>
+    <div class="doctor-card__tags"><span class="doctor-card__tag">Ortodonție</span><span class="doctor-card__tag">Alignere</span><span class="doctor-card__tag">Aparate dentare</span></div>
+    <div class="doctor-card__bio"><p>Creează planuri personalizate pentru alinierea zâmbetului, cu soluții moderne și monitorizare atentă pe parcursul tratamentului.</p></div>
+    <a class="doctor-card__link" href="programare.html" data-preview-link>Programează o consultație <span aria-hidden="true">→</span></a>
+  </div>
+</article>
+
+<article class="doctor-card ">
+  <div class="doctor-card__portrait card-surface"><span class="doctor-card__initials" aria-hidden="true">AM</span></div>
+  <div class="doctor-card__content card-surface">
+    <header>
+      <p class="doctor-card__eyebrow">Echipa DENTAMA</p>
+      <h2>Asistentă medicală</h2>
+      <p class="doctor-card__role">Asistentă medicală principală</p>
+    </header>
+    <div class="doctor-card__tags"><span class="doctor-card__tag">Asistență medicală</span><span class="doctor-card__tag">Sterilizare</span><span class="doctor-card__tag">Confortul pacientului</span></div>
+    <div class="doctor-card__bio"><p>Se asigură că fiecare vizită se desfășoară într-un mediu bine pregătit, calm și atent la nevoile pacientului.</p></div>
+    <a class="doctor-card__link" href="programare.html" data-preview-link>Solicită o programare <span aria-hidden="true">→</span></a>
+  </div>
+</article>
+</div>
+    </div>
+  </section>
+
+  <section class="team-cta">
+    <div class="team-shell team-cta__inner">
+      <div><span class="team-eyebrow">Primul pas</span><h2>Vrei să cunoști echipa?</h2><p>Solicită o programare, iar noi te ajutăm să alegi consultația potrivită.</p></div>
+      <a href="programare.html" data-preview-link>Programează-te <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</main>
+
+  <!-- Componentă: footer principal DENTAMA -->
+<footer class="site-footer" data-footer>
+  <div class="site-footer__glow" aria-hidden="true"></div>
+  <div class="site-footer__container">
+    <section class="site-footer__cta" aria-labelledby="footer-cta-title">
+      <div>
+        <span class="site-footer__eyebrow">Ai nevoie de o consultație?</span>
+        <h2 id="footer-cta-title">Primul pas spre un zâmbet sănătos începe aici.</h2>
+        <p>Spune-ne pe scurt ce te supără, iar echipa DENTAMA te va contacta pentru stabilirea programării.</p>
+      </div>
+      <div class="site-footer__cta-actions">
+        <a class="site-footer__button" href="programare.html" data-preview-link>Solicită o programare <span aria-hidden="true">→</span></a>
+        <a class="site-footer__phone" href="tel:+40722000000">
+          <span class="site-footer__round-icon" aria-hidden="true">☎</span>
+          <span><small>Sună direct</small>+40 722 000 000</span>
+        </a>
+      </div>
+    </section>
+
+    <div class="site-footer__main">
+      <div class="site-footer__brand">
+        <a href="index.html" data-preview-link aria-label="DENTAMA — pagina principală">
+          <img src="../app/static/assets/logo-transparent.png" alt="DENTAMA">
+        </a>
+        <p>Stomatologie modernă, cu grijă pentru confortul tău și precizie până la cel mai mic detaliu.</p>
+        <div class="site-footer__rating" aria-label="Evaluare 5 din 5 pe Google">
+          <strong>5.0</strong><span aria-hidden="true">★★★★★</span><small>Recenzii Google</small>
+        </div>
+      </div>
+
+      <nav class="site-footer__column" aria-label="Navigare în subsol">
+        <h3>Explorează</h3>
+        <ul class="site-footer__links">
+          <li><a href="/servicii">Servicii</a></li>
+          <li><a href="echipa.html" data-preview-link>Echipa medicală</a></li>
+          <li><a href="tarife.html" data-preview-link>Tarife</a></li>
+          <li><a href="/cazuri-noi">Cazuri clinice</a></li>
+          <li><a href="/despre-noi">Despre noi</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-footer__column">
+        <h3>Ne găsești aici</h3>
+        <ul class="site-footer__contact">
+          <li><span aria-hidden="true">⌖</span><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Strada+Vasile+Lupu+88+Iasi" target="_blank" rel="noopener noreferrer">Str. Vasile Lupu nr. 88,<br>Bloc Z, Iași</a></li>
+          <li><span aria-hidden="true">✉</span><a href="mailto:contact@dentama.ro">contact@dentama.ro</a></li>
+          <li><span aria-hidden="true">☎</span><a href="tel:+40722000000">+40 722 000 000</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__column site-footer__schedule">
+        <h3>Program</h3>
+        <div><span>Luni – Vineri</span><strong>08:00 – 20:00</strong></div>
+        <div><span>Sâmbătă</span><strong>Închis</strong></div>
+        <div><span>Duminică</span><strong>Închis</strong></div>
+        <div class="site-footer__social" aria-label="Rețele sociale">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="DENTAMA pe Instagram">IG</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="DENTAMA pe Facebook">f</a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="DENTAMA pe TikTok">TT</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-footer__bottom">
+    <div class="site-footer__container site-footer__bottom-inner">
+      <p>© <span data-footer-year>2026</span> DENTAMA. Toate drepturile rezervate.</p>
+      <div><a href="/politica-de-confidentialitate">Politica de confidențialitate</a><span aria-hidden="true">•</span><span>Cabinet stomatologic · Iași</span></div>
+    </div>
+  </div>
+</footer>
+
+  <script src="../app/static/components/menu/menu.js"></script>
+  <script src="../app/static/components/footer/footer.js"></script>
+  
+  <script>
+    document.querySelectorAll('a:not([data-external-action]):not([data-preview-link])').forEach(link => link.addEventListener('click', event => event.preventDefault()));
+    window.initDentamaMenu();
+    window.initDentamaFooter();
+  </script>
+</body>
+</html>
